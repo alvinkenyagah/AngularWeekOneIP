@@ -1,4 +1,20 @@
 <div class="container mt-5">
     <h2>List of Quotes</h2>
+
+<table class="table">
+    <thead>
+        <th>Added by</th>
+        <th>Author</th>
+        <th>Quote</th>
+    </thead>
+    <tbody>
+
+<tr *ngfor="let quote of quotes">
+    <td>{{ quote.addedby}}</td>
+    <td>{{ quote.author}}</td>
+    <td>{{ quote.quote}}</td>
+</tr>
+    </tbody>
+</table>
     </div>
     

@@ -36,4 +36,9 @@ export class QuotesService {
   ];
 
   constructor() { }
+
+onGet() {
+  return this.quotes;
+}
+
 }
