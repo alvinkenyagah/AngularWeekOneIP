@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import{ Quote } from '../models/quote.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuotesService {
-  quotes: quote[] = [
+  quotes: Quote[] = [ 
     {
       addedby: "Jadiel",
       author: "Vladmir Putin",
@@ -38,7 +39,7 @@ export class QuotesService {
   constructor() { }
 
 onGet() {
-  return this.quotes;
+  return this.quotes
 }
 
 }
