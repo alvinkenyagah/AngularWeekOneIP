@@ -4,7 +4,7 @@
 #### By **Alvin Kenyagah**
 ## Description
  I will be creating Web application Quotify where users can add their quotes, upvote, downvote and delete quotes.
-  The live link to the landing page: 
+  The live link to the landing page: https://alvinkenyagah.github.io/AngularWeekOneIP/
 ## Setup/Installation Requirements
 * An internet connection.
 * Browser.
