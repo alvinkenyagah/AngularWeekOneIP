@@ -1,55 +1,39 @@
 <div class="col-md-5 mx-auto">
-    <br>
-    <form onsubmit="sendEmail(); reset();">
-      <div class="card">
-          <div class="card-body">
-              <div class="row ">
-                  <div class="col-lg-12">
-                      <div class="head text-center text-white py-3">
-                          <h3>Contact Us</h3>
-                        </div>
-                      </div>
-                    </div>
-                    <form onsubmit="sendEmail(); reset();">
-                    
+    <form #quoteForm = 'ngForm' (ngSubmit) = "addQuote()">     
               <div class="form py-1">
                   <div class="form-row my-1">
                       <div class="col-md-12">
-                         
-                          <input type="text" class="effect-1" id="name" placeholder="Your Name" required>
+                         <h3>Quote added by: </h3>
+                          <input type="text" class="effect-1" id="name"[(ngModel)]="newQuote.submittedBy" name="submittedBy" placeholder="Quote added by" required>
                           <span class="focus-border"></span>
                       </div>
                    </div>
                   <div class="form-row my-3">
                       <div class="col-md-12">
-                        <input type="text" class="effect-1" id="phone" placeholder="Phone Number" required>
+                        <h3>Author: </h3>
+                        <input type="text" class="effect-1" id="title"[(ngModel)]="newQuote.author" name="author" placeholder="Author" required>
                           <span class="focus-border"></span>
                       </div>
               </div>
               <div class="form-row my-3">
                 <div class="col-md-12">
-                  <input type="text" class="effect-1" id="email" placeholder="Email" required>
+                  <h3>Add quote: </h3>
+                  <textarea  id="message"[(ngModel)]="newQuote.body" name="body" class="effect-1"  rows="5" placeholder="Enter your quote"></textarea>
                           <span class="focus-border"></span>
                 </div>
               </div>
               <div class="form-row my-3">
-                <div class="col-md-12">
-                  <textarea  id="message" class="effect-1"  rows="1" placeholder="How can we help you"></textarea>
-                          <span class="focus-border"></span>
-                </div>
-              </div>
-              <div class="form-row my-3">
-                <div class="col-lg-6">
-  
-        
-                  <p class="text-dark"> <input type="checkbox"> I'm not a robot </p>
-                  
-                </div>
-                <div class="col-md-4">
-                  <button class="btn1"> Send Message</button>
-  
+                <div class="col-md-4"> 
+                  <button type="submit" class="btn btn-primary btn-sm" value="output quote" id="bnt-submit">Share Quote</button>
                 </div>
               </div>
           </div>
   </form>
   
+
+
+
+
+
+
+
